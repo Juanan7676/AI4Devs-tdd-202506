@@ -1,4 +1,4 @@
-const NAME_REGEX = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/;
+const NAME_REGEX = /^[a-zA-ZñÑáéíóúÁÉÍÓÚçÇüÜ ]+$/;
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const PHONE_REGEX = /^(6|7|9)\d{8}$/;
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
@@ -83,8 +83,8 @@ export const validateCandidateData = (data: any) => {
         return;
     }
 
-    validateName(data.firstName); 
-    validateName(data.lastName); 
+    validateName(data.firstName);
+    validateName(data.lastName);
     validateEmail(data.email);
     validatePhone(data.phone);
     validateAddress(data.address);
